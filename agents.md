@@ -69,6 +69,52 @@ export type UserId = Schema.Schema.Type<typeof UserId>
 - Local state with useState
 - No global state libraries needed
 
+### TanStack Pacer (Debounce/Throttle)
+Use `@tanstack/react-pacer` for execution timing control:
+
+```typescript
+import {
+  useDebouncedCallback,
+  useThrottledCallback,
+  useThrottledValue,
+  useAsyncDebouncedCallback
+} from '@tanstack/react-pacer'
+
+// Debounced search input
+const handleSearch = useDebouncedCallback(
+  (query: string) => fetchResults(query),
+  { wait: 500 }
+)
+
+<input onChange={(e) => handleSearch(e.target.value)} />
+
+// Async debounce with loading state
+const handleAsyncSearch = useAsyncDebouncedCallback(
+  async (query: string) => {
+    const results = await fetch(`/api/search?q=${query}`)
+    return results.json()
+  },
+  { wait: 500 }
+)
+
+// Throttled scroll handler
+const handleResize = useThrottledCallback(
+  () => updateLayout(),
+  { wait: 100 }
+)
+
+// Throttled value (e.g., scroll position)
+const [throttledScrollY] = useThrottledValue(scrollY, { wait: 200 })
+```
+
+**When to use:**
+| Utility | Use Case |
+|---------|----------|
+| `useDebouncedCallback` | Search input, form validation |
+| `useAsyncDebouncedCallback` | API calls with loading state |
+| `useThrottledCallback` | Scroll, resize handlers |
+| `useThrottledValue` | Smooth value updates |
+
 ### Don't Over useState (TkDodo)
 If it can be computed from state/props, it's NOT state:
 
