@@ -69,39 +69,117 @@ export type UserId = Schema.Schema.Type<typeof UserId>
 - Local state with useState
 - No global state libraries needed
 
-### You Might Not Need useState/useEffect
-Derive state during render, don't sync with useEffect:
+### Don't Over useState (TkDodo)
+If it can be computed from state/props, it's NOT state:
 
 ```typescript
-// BAD: syncing state with useEffect
-const [fullName, setFullName] = useState('')
+// BAD: derived state in useState + useEffect
+const [data, setData] = useState(null)
+const [categories, setCategories] = useState([])
+
 useEffect(() => {
-  setFullName(`${firstName} ${lastName}`)
-}, [firstName, lastName])
+  if (data) setCategories(computeCategories(data))
+}, [data])
 
 // GOOD: derive during render
-const fullName = `${firstName} ${lastName}`
-
-// BAD: resetting state on prop change
-useEffect(() => {
-  setSelection(null)
-}, [items])
-
-// GOOD: use key to reset component
-<List items={items} key={listId} />
-
-// BAD: fetching in useEffect
-useEffect(() => {
-  fetch('/api/data').then(setData)
-}, [])
-
-// GOOD: use TanStack Query
-const { data } = useQuery({ queryKey: ['data'], queryFn: fetchData })
+const [data, setData] = useState(null)
+const categories = data ? computeCategories(data) : []
 ```
 
-When to use useEffect:
-- Syncing with external systems (DOM, subscriptions, WebSocket)
-- NOT for: derived state, data fetching, event handling
+**Rule**: If a setter is only used in an effect, eliminate that state.
+
+### You Might Not Need an Effect (React Docs)
+
+**Two cases where you don't need Effects:**
+1. Transforming data for rendering → calculate during render
+2. Handling user events → use event handlers
+
+```typescript
+// BAD: redundant state + effect
+const [visibleTodos, setVisibleTodos] = useState([])
+useEffect(() => {
+  setVisibleTodos(getFilteredTodos(todos, filter))
+}, [todos, filter])
+
+// GOOD: derive during render
+const visibleTodos = getFilteredTodos(todos, filter)
+
+// GOOD: expensive? use useMemo (measure first!)
+const visibleTodos = useMemo(
+  () => getFilteredTodos(todos, filter),
+  [todos, filter]
+)
+```
+
+**Reset state with key, not useEffect:**
+```typescript
+// BAD
+useEffect(() => { setComment('') }, [userId])
+
+// GOOD
+<Profile userId={userId} key={userId} />
+```
+
+**Store IDs, derive objects:**
+```typescript
+// BAD: reset selection when items change
+const [selection, setSelection] = useState(null)
+useEffect(() => { setSelection(null) }, [items])
+
+// GOOD: store ID, derive selection
+const [selectedId, setSelectedId] = useState(null)
+const selection = items.find(item => item.id === selectedId) ?? null
+```
+
+**Event logic in handlers, not Effects:**
+```typescript
+// BAD: event-specific logic in effect
+useEffect(() => {
+  if (product.isInCart) showNotification('Added!')
+}, [product])
+
+// GOOD: in event handler
+function handleBuyClick() {
+  addToCart(product)
+  showNotification('Added!')
+}
+```
+
+**Don't chain Effects:**
+```typescript
+// BAD: effect chains
+useEffect(() => { setGoldCount(c => c + 1) }, [card])
+useEffect(() => { setRound(r => r + 1) }, [goldCount])
+useEffect(() => { setIsGameOver(true) }, [round])
+
+// GOOD: calculate in render + update in handler
+const isGameOver = round > 5
+function handlePlaceCard(nextCard) {
+  setCard(nextCard)
+  if (nextCard.gold) {
+    // all state updates in one place
+  }
+}
+```
+
+**Data fetching → TanStack Query:**
+```typescript
+// BAD: useEffect with race conditions
+useEffect(() => {
+  fetchResults(query).then(setResults)
+}, [query])
+
+// GOOD: TanStack Query handles caching, races, revalidation
+const { data } = useQuery({
+  queryKey: ['search', query],
+  queryFn: () => fetchResults(query)
+})
+```
+
+**When to actually use useEffect:**
+- Syncing with external systems (DOM APIs, WebSocket, subscriptions)
+- Analytics on mount
+- NOT for: derived state, data fetching, event handling, state sync
 
 ## Design System
 
