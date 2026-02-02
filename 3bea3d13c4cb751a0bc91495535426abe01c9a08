@@ -1,0 +1,25 @@
+frontend/src/hooks/use-chat.ts
+  da111cea1791e293 3,250-252,259,262
+frontend/src/App.tsx
+  da111cea1791e293 3,139-143,145-150,155
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "3bea3d13c4cb751a0bc91495535426abe01c9a08",
+  "prompts": {
+    "da111cea1791e293": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_3e34ad146ffenLdCu6RxltCIzZ",
+        "model": "anthropic/claude-opus-4-5"
+      },
+      "human_author": "Bikash Phukan <bphkns@gmail.com>",
+      "messages": [],
+      "total_additions": 22,
+      "total_deletions": 16,
+      "accepted_lines": 19,
+      "overriden_lines": 0
+    }
+  }
+}
