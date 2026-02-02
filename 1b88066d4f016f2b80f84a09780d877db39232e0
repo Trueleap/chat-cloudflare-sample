@@ -1,0 +1,23 @@
+agents.md
+  da111cea1791e293 72-117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "1b88066d4f016f2b80f84a09780d877db39232e0",
+  "prompts": {
+    "da111cea1791e293": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_3e34ad146ffenLdCu6RxltCIzZ",
+        "model": "anthropic/claude-opus-4-5"
+      },
+      "human_author": "Bikash Phukan <bphkns@gmail.com>",
+      "messages": [],
+      "total_additions": 46,
+      "total_deletions": 0,
+      "accepted_lines": 46,
+      "overriden_lines": 0
+    }
+  }
+}
