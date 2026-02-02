@@ -6,6 +6,7 @@
     "lib": ["ES2022"],
     "types": ["@cloudflare/workers-types"],
     "strict": true,
+    "plugins": [{ "name": "@effect/language-service" }],
     "noEmit": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
