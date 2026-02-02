@@ -17,6 +17,8 @@ Real-time chat application built with Cloudflare Workers, Durable Objects, and E
 - **State**: TanStack Query v5
 - **Fonts**: Space Grotesk, JetBrains Mono
 
+> **Note:** This sample intentionally does not integrate `@effect/platform` HTTP layer to keep complexity minimal. In production, HTTP routing would typically be handled separately (e.g., via `@effect/platform` or a dedicated API gateway), with Durable Objects focused purely on stateful WebSocket/storage logic.
+
 ## Architecture
 
 ```
