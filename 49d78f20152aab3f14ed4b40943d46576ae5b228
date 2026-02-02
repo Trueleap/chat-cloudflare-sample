@@ -1,0 +1,21 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "49d78f20152aab3f14ed4b40943d46576ae5b228",
+  "prompts": {
+    "da111cea1791e293": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_3e34ad146ffenLdCu6RxltCIzZ",
+        "model": "anthropic/claude-haiku-4-5"
+      },
+      "human_author": "Bikash Phukan <bphkns@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 28,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
