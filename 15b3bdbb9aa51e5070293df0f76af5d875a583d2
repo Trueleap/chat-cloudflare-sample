@@ -1,0 +1,37 @@
+eslint.config.js
+  da111cea1791e293 1-18
+frontend/src/hooks/use-chat.ts
+  da111cea1791e293 56
+frontend/src/components/ui/button.variants.ts
+  da111cea1791e293 1-24
+frontend/src/App.tsx
+  da111cea1791e293 154-160
+package.json
+  da111cea1791e293 11-13
+frontend/eslint.config.js
+  da111cea1791e293 22-25
+frontend/src/components/ui/button.tsx
+  da111cea1791e293 2,4,23
+frontend/src/components/ui/index.ts
+  da111cea1791e293 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "15b3bdbb9aa51e5070293df0f76af5d875a583d2",
+  "prompts": {
+    "da111cea1791e293": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_3e34ad146ffenLdCu6RxltCIzZ",
+        "model": "anthropic/claude-opus-4-5"
+      },
+      "human_author": "Bikash Phukan <bphkns@gmail.com>",
+      "messages": [],
+      "total_additions": 147,
+      "total_deletions": 75,
+      "accepted_lines": 100,
+      "overriden_lines": 0
+    }
+  }
+}
