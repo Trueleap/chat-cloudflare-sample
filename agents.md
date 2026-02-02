@@ -27,6 +27,34 @@ Coding standards enforced in this project.
 
 ## Effect-TS Patterns
 
+### You Don't Need Effect
+Don't wrap everything in Effect. Use plain functions when:
+- Synchronous with no errors to track
+- Simple transformations
+- No dependency injection needed
+
+Use Effect when you need:
+- Typed error channel (recoverable vs defects)
+- Dependency injection via services
+- Resource management (acquire/release)
+- Retries, timeouts, concurrency control
+- Composition of async operations
+
+```typescript
+// BAD: unnecessary Effect
+const add = (a: number, b: number) => Effect.succeed(a + b)
+
+// GOOD: plain function
+const add = (a: number, b: number) => a + b
+
+// GOOD: Effect for actual needs (errors, DI, async)
+const fetchUser = (id: string) => Effect.gen(function* () {
+  const http = yield* HttpClient
+  const response = yield* http.get(`/users/${id}`)
+  return yield* response.json
+})
+```
+
 ### Services
 ```typescript
 export class MyService extends Effect.Service<MyService>()("MyService", {
@@ -68,6 +96,40 @@ export type UserId = Schema.Schema.Type<typeof UserId>
 - TanStack Query for server state
 - Local state with useState
 - No global state libraries needed
+
+### You Might Not Need useState/useEffect
+Derive state during render, don't sync with useEffect:
+
+```typescript
+// BAD: syncing state with useEffect
+const [fullName, setFullName] = useState('')
+useEffect(() => {
+  setFullName(`${firstName} ${lastName}`)
+}, [firstName, lastName])
+
+// GOOD: derive during render
+const fullName = `${firstName} ${lastName}`
+
+// BAD: resetting state on prop change
+useEffect(() => {
+  setSelection(null)
+}, [items])
+
+// GOOD: use key to reset component
+<List items={items} key={listId} />
+
+// BAD: fetching in useEffect
+useEffect(() => {
+  fetch('/api/data').then(setData)
+}, [])
+
+// GOOD: use TanStack Query
+const { data } = useQuery({ queryKey: ['data'], queryFn: fetchData })
+```
+
+When to use useEffect:
+- Syncing with external systems (DOM, subscriptions, WebSocket)
+- NOT for: derived state, data fetching, event handling
 
 ## Design System
 
