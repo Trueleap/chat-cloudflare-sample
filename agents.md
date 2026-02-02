@@ -69,6 +69,60 @@ export type UserId = Schema.Schema.Type<typeof UserId>
 - Local state with useState
 - No global state libraries needed
 
+### TanStack Query Options API (TkDodo)
+Always use `queryOptions()` to define queries - never inline:
+
+```typescript
+import { queryOptions, useQuery, useSuspenseQuery } from '@tanstack/react-query'
+
+// GOOD: reusable, type-safe query definition
+const todosQuery = queryOptions({
+  queryKey: ['todos'],
+  queryFn: fetchTodos,
+  staleTime: 5000,
+})
+
+// Works everywhere
+useQuery(todosQuery)
+useSuspenseQuery(todosQuery)
+queryClient.prefetchQuery(todosQuery)
+
+// Type-safe getQueryData (infers Todo[] from queryFn)
+const todos = queryClient.getQueryData(todosQuery.queryKey)
+//    ^? Todo[] | undefined
+```
+
+**Query factory pattern** - co-locate keys and functions:
+
+```typescript
+export const todoQueries = {
+  all: () => ['todos'],
+  lists: () => [...todoQueries.all(), 'list'],
+  list: (filters: string) =>
+    queryOptions({
+      queryKey: [...todoQueries.lists(), filters],
+      queryFn: () => fetchTodos(filters),
+    }),
+  details: () => [...todoQueries.all(), 'detail'],
+  detail: (id: number) =>
+    queryOptions({
+      queryKey: [...todoQueries.details(), id],
+      queryFn: () => fetchTodo(id),
+      staleTime: 5000,
+    }),
+}
+
+// Usage
+useQuery(todoQueries.list('active'))
+queryClient.invalidateQueries({ queryKey: todoQueries.lists() })
+```
+
+**Why:**
+- Type safety: catches typos (`stallTime` vs `staleTime`)
+- DataTag: `getQueryData` infers type from `queryFn`
+- Reusable: same object for hooks and imperative calls
+- Co-location: queryKey + queryFn together (separating them was a mistake)
+
 ### TanStack Pacer (Debounce/Throttle)
 Use `@tanstack/react-pacer` for execution timing control:
 
