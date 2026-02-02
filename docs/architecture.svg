@@ -1,0 +1,133 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1719.84375 510" width="1719.84375" height="510">
+  <rect x="0" y="0" width="1719.84375" height="510" fill="#ffffff"></rect>
+  <g stroke-linecap="round" transform="translate(1399.84375 10) rotate(0 155 245)">
+    <path d="M0 0 C111.58 -1.11, 222.4 -0.21, 310 0 M0 0 C68.64 -1, 138.19 -0.21, 310 0 M310 0 C311.12 184.46, 311.61 367.89, 310 490 M310 0 C308.57 175.52, 308.49 351.12, 310 490 M310 490 C188.98 491.74, 69.84 490.7, 0 490 M310 490 C200.71 487.78, 91.98 487.24, 0 490 M0 490 C-1.61 344.72, -1.49 198.59, 0 0 M0 490 C0.65 388.11, 0.91 285.55, 0 0" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1458.4238586425781 15) rotate(0 96.41989135742188 12.5)">
+    <text x="96.41989135742188" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">Core Functionalities</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(1424.84375 45) rotate(0 130 45)">
+    <path d="M-1.8 1.29 L258.87 -0.03 L261.43 91.35 L0.89 91.89" stroke="none" stroke-width="0" fill="#ffffff"></path>
+    <path d="M0 0 C54.62 0.77, 112.03 -0.06, 260 0 M0 0 C56.79 -0.2, 111.77 -0.33, 260 0 M260 0 C261.94 34.65, 260.54 71.52, 260 90 M260 0 C260.51 28.9, 260.15 56.01, 260 90 M260 90 C171.82 90.63, 80.4 88.9, 0 90 M260 90 C183.68 89.07, 108.05 88.61, 0 90 M0 90 C-2.3 54.43, -1.98 19.91, 0 0 M0 90 C-0.39 59.1, -0.02 28.19, 0 0" stroke="#757575" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1445.4138717651367 77.5) rotate(0 109.42987823486328 12.5)">
+    <text x="109.42987823486328" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#333" text-anchor="middle" dominant-baseline="alphabetic">WebSocket Hibernation</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(1450.375 185) rotate(0 104.46875 30)">
+    <path d="M1.43 1.35 L209.82 1.89 L209.88 59.6 L-1.56 59.69" stroke="none" stroke-width="0" fill="#ffffff"></path>
+    <path d="M0 0 C65.32 1.7, 134.07 1.92, 208.94 0 M0 0 C72.64 0.26, 144.18 0.01, 208.94 0 M208.94 0 C209.17 13.25, 209.85 29.83, 208.94 60 M208.94 0 C209.67 21.19, 208.94 43.05, 208.94 60 M208.94 60 C129.69 59.82, 49.24 59.42, 0 60 M208.94 60 C127.39 61.14, 44.93 59.87, 0 60 M0 60 C1.37 45.04, -0.97 28.28, 0 0 M0 60 C-1.14 41.4, -0.81 21.5, 0 0" stroke="#757575" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1475.7238311767578 202.5) rotate(0 79.11991882324219 12.5)">
+    <text x="79.11991882324219" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#333" text-anchor="middle" dominant-baseline="alphabetic">Message History</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(1444.8046875 295) rotate(0 110.0390625 30)">
+    <path d="M0.94 -0.4 L218.52 -0.31 L219.79 60.21 L0.93 61.64" stroke="none" stroke-width="0" fill="#ffffff"></path>
+    <path d="M0 0 C80.56 -2.74, 160.1 0.3, 220.08 0 M0 0 C84.55 -1.21, 170.06 -0.98, 220.08 0 M220.08 0 C221.46 16.64, 218.98 32.08, 220.08 60 M220.08 0 C220.68 16.53, 219.6 34.95, 220.08 60 M220.08 60 C151.14 61.4, 79.58 61.48, 0 60 M220.08 60 C142.37 57.6, 65.13 58.65, 0 60 M0 60 C0.84 40, 1.26 16.59, 0 0 M0 60 C1.06 38.8, 0.78 17.2, 0 0" stroke="#757575" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1466.5538330078125 312.5) rotate(0 88.2899169921875 12.5)">
+    <text x="88.2899169921875" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#333" text-anchor="middle" dominant-baseline="alphabetic">Sharded User List</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(1444.81640625 405) rotate(0 110.02734375 30)">
+    <path d="M-0.29 0.21 L220.99 1.64 L220.59 60.56 L-0.44 59.22" stroke="none" stroke-width="0" fill="#ffffff"></path>
+    <path d="M0 0 C50.86 -0.58, 99.73 -3.04, 220.05 0 M0 0 C63.07 0.14, 127.59 0.19, 220.05 0 M220.05 0 C219.47 20.46, 220.67 43.7, 220.05 60 M220.05 0 C220.08 11.31, 219.86 25.17, 220.05 60 M220.05 60 C136.64 62.91, 49.85 61.06, 0 60 M220.05 60 C171.11 60.25, 121.38 61.05, 0 60 M0 60 C1.04 38.45, -0.28 20.6, 0 0 M0 60 C0.21 37.74, -1.04 15.73, 0 0" stroke="#757575" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1467.2338333129883 422.5) rotate(0 87.60991668701172 12.5)">
+    <text x="87.60991668701172" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#333" text-anchor="middle" dominant-baseline="alphabetic">Auto-Expiry Alarm</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(1039.84375 30) rotate(0 155 227.5)">
+    <path d="M0 0 C116.37 1.17, 233.3 0.9, 310 0 M0 0 C108.58 -1.71, 216.73 -1.27, 310 0 M310 0 C310.19 122.46, 311.06 245.68, 310 455 M310 0 C310.35 99.88, 310.37 199.65, 310 455 M310 455 C193.68 453.97, 80.19 454.89, 0 455 M310 455 C239.39 455.76, 167.55 455.92, 0 455 M0 455 C0.68 344.7, 0.93 234.01, 0 0 M0 455 C1.61 327.71, 1.9 200.72, 0 0" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1076.9238662719727 35) rotate(0 117.91988372802734 25)">
+    <text x="117.91988372802734" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">Durable Objects - State</text>
+    <text x="117.91988372802734" y="42.62" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">Management</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(1064.84375 107.5) rotate(0 130 45)">
+    <path d="M-1.96 -0.79 L259.35 -0.93 L258.63 89.9 L-0.88 89.03" stroke="none" stroke-width="0" fill="#f3e5f5"></path>
+    <path d="M0 0 C73.43 2.22, 146.15 1.64, 260 0 M0 0 C59.62 0.59, 120.36 -0.61, 260 0 M260 0 C258.32 24.31, 261.82 50.35, 260 90 M260 0 C261.5 29.41, 260.44 59.89, 260 90 M260 90 C185.36 91.02, 113.33 91.62, 0 90 M260 90 C170.76 91.33, 83 91.88, 0 90 M0 90 C-1.25 57.46, -1.16 27.74, 0 0 M0 90 C-0.15 62.34, -0.64 33.73, 0 0" stroke="#4a148c" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1105.673828125 127.5) rotate(0 89.169921875 25)">
+    <text x="89.169921875" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#000" text-anchor="middle" dominant-baseline="alphabetic">ChatRoom Durable</text>
+    <text x="89.169921875" y="42.62" font-family="sans-serif" font-size="20px" fill="#000" text-anchor="middle" dominant-baseline="alphabetic">Object</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(1064.84375 335) rotate(0 130 45)">
+    <path d="M-1.37 -0.1 L259.12 -0.97 L260.56 89.58 L-0.47 90.13" stroke="none" stroke-width="0" fill="#e8f5e9"></path>
+    <path d="M0 0 C99.55 -0.38, 201.19 -1.55, 260 0 M0 0 C91.25 1.99, 183.14 1.39, 260 0 M260 0 C261.58 28.57, 261.88 55.07, 260 90 M260 0 C259.51 19.21, 260.15 36.78, 260 90 M260 90 C181.9 89.4, 103.51 89.93, 0 90 M260 90 C182.78 92.16, 105.23 91.25, 0 90 M0 90 C0.35 70.94, 1.78 50.55, 0 0 M0 90 C-0.79 60.09, -0.13 30.5, 0 0" stroke="#1b5e20" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(1076.1338577270508 367.5) rotate(0 118.70989227294922 12.5)">
+    <text x="118.70989227294922" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#000" text-anchor="middle" dominant-baseline="alphabetic">Presence Durable Object</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(513.0859375 92.5) rotate(0 155 168.75)">
+    <path d="M0 0 C106.88 1.8, 210.86 0.25, 310 0 M0 0 C90.97 2.47, 182.56 2.06, 310 0 M310 0 C309.94 130.29, 310.15 261.29, 310 337.5 M310 0 C311.08 116.8, 311.33 233.61, 310 337.5 M310 337.5 C244.91 337.27, 180.84 336.88, 0 337.5 M310 337.5 C187.14 336.94, 65.29 337.13, 0 337.5 M0 337.5 C-1.49 220.21, -2.39 102.18, 0 0 M0 337.5 C0.28 249.58, 0.44 161.4, 0 0" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(586.5360260009766 97.5) rotate(0 81.54991149902344 12.5)">
+    <text x="81.54991149902344" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">Request Routing</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(538.0859375 217.5) rotate(0 130 45)">
+    <path d="M1.87 0.36 L259.02 -1.4 L260.42 91.54 L1.87 91.82" stroke="none" stroke-width="0" fill="#fff3e0"></path>
+    <path d="M0 0 C98.37 0.94, 195.65 0.58, 260 0 M0 0 C103.14 -0.35, 205.45 -1.5, 260 0 M260 0 C260.23 24.77, 257.89 47.73, 260 90 M260 0 C259.46 29.51, 259.8 57.71, 260 90 M260 90 C164.86 91.68, 66.38 89.68, 0 90 M260 90 C186.41 90.87, 112.28 90.44, 0 90 M0 90 C-0.44 64.32, -0.58 38.57, 0 0 M0 90 C0.67 63.23, 0.16 36.94, 0 0" stroke="#e65100" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(551.9660491943359 250) rotate(0 116.11988830566406 12.5)">
+    <text x="116.11988830566406" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#000" text-anchor="middle" dominant-baseline="alphabetic">Cloudflare Worker Entry</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(10 197.5) rotate(0 141.14453125 65)">
+    <path d="M0 0 C91.95 1.31, 181.6 1.38, 282.29 0 M0 0 C99.01 1.4, 198.43 2.32, 282.29 0 M282.29 0 C281.78 45.88, 282.19 88.35, 282.29 130 M282.29 0 C282.27 48.07, 282 95.73, 282.29 130 M282.29 130 C184.06 128.1, 86.46 129.04, 0 130 M282.29 130 C174.24 130.3, 65.77 130.3, 0 130 M0 130 C0.51 94.36, -0.36 61.03, 0 0 M0 130 C1.24 93.92, -0.18 56.79, 0 0" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(77.85460662841797 202.5) rotate(0 73.28992462158203 12.5)">
+    <text x="73.28992462158203" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">User Interface</text>
+  </g>
+  <g stroke-linecap="round" transform="translate(35 232.5) rotate(0 116.14453125 30)">
+    <path d="M1.9 -0.36 L230.45 0.4 L232.08 60.33 L-0.22 60.11" stroke="none" stroke-width="0" fill="#e1f5fe"></path>
+    <path d="M0 0 C89.87 -0.51, 176.44 -2.31, 232.29 0 M0 0 C52.49 -1.5, 104.21 -0.72, 232.29 0 M232.29 0 C233.83 19.29, 232.51 42.27, 232.29 60 M232.29 0 C233.03 21.86, 231.78 43.96, 232.29 60 M232.29 60 C167.35 61.37, 100.11 60.55, 0 60 M232.29 60 C171.41 58.83, 110.5 59.18, 0 60 M0 60 C-0.13 44.16, 0.43 31.13, 0 0 M0 60 C0.51 41.71, 1.23 22.78, 0 0" stroke="#01579b" stroke-width="2" fill="none"></path>
+  </g>
+  <g transform="translate(54.234619140625 250) rotate(0 96.909912109375 12.5)">
+    <text x="96.909912109375" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#000" text-anchor="middle" dominant-baseline="alphabetic">User Browser / App</text>
+  </g>
+  <g stroke-linecap="round">
+    <g transform="translate(271.789 262.5) rotate(0 130.92942114254834 0.11530973728417848)">
+      <path d="M0 0 L262 0" stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+      <path d="M10 -5 L0 0 L10 5" stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+      <path d="M252 -5 L262 0 L252 5" stroke="#1e1e1e" stroke-width="4" fill="none"></path>
+    </g>
+  </g>
+  <g transform="translate(307.2580912475586 250) rotate(0 95.46032989498974 12.615309737284178)">
+    <text x="95.4299087524414" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">WebSocket / HTTP</text>
+  </g>
+  <g stroke-linecap="round">
+    <g transform="translate(731.9949999999999 217.5) rotate(0 164.44868937637477 -35.21749004678446)">
+      <path d="M0 0 C50 -40, 100 -65, 165 -65 C230 -65, 290 -65, 330 -65" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+      <path d="M320 -60 L330 -65 L320 -70" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+    </g>
+  </g>
+  <g transform="translate(839.6250799560546 140) rotate(0 56.81860942032006 42.28250995321554)">
+    <text x="91.83992004394531" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">Route per RoomID</text>
+  </g>
+  <g stroke-linecap="round">
+    <g transform="translate(727.9479999999999 307.5) rotate(0 166.10287340122 39.060291190776866)">
+      <path d="M0 0 C50 40, 100 75, 165 75 C230 75, 290 72, 332 72" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+      <path d="M322 67 L332 72 L322 77" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+    </g>
+  </g>
+  <g transform="translate(837.7950781249999 367.5) rotate(0 56.25579527621994 -20.939708809223134)">
+    <text x="93.669921875" y="17.619999999999997" font-family="sans-serif" font-size="20px" fill="#1e1e1e" text-anchor="middle" dominant-baseline="alphabetic">Route per ShardID</text>
+  </g>
+  <g stroke-linecap="round">
+    <g transform="translate(1306.944 107.5) rotate(0 58.742263546283425 -9.82801511940309)">
+      <path d="M0 0 L118 -18" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+    </g>
+  </g>
+  <g stroke-linecap="round">
+    <g transform="translate(1306.944 197.5) rotate(0 71.30537360357778 9.899866119379908)">
+      <path d="M0 0 L142 18" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+    </g>
+  </g>
+  <g stroke-linecap="round">
+    <g transform="translate(1322.162 335) rotate(0 61.02703158550992 -5.315532206664784)">
+      <path d="M0 0 L122 -10" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+    </g>
+  </g>
+  <g stroke-linecap="round">
+    <g transform="translate(1322.162 425) rotate(0 60.94003392588627 5.485137124572134)">
+      <path d="M0 0 L122 11" stroke="#1e1e1e" stroke-width="2" fill="none"></path>
+    </g>
+  </g>
+</svg>

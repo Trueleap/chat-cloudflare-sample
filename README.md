@@ -21,20 +21,7 @@ Real-time chat application built with Cloudflare Workers, Durable Objects, and E
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        Cloudflare Edge                          │
-├─────────────────────────────────────────────────────────────────┤
-│  Worker (index.ts)                                              │
-│  └── Routes requests to Durable Objects + CORS                  │
-├─────────────────────────────────────────────────────────────────┤
-│  ChatRoom DO                            │  PresenceDO           │
-│  ├── WebSocket hibernation              │  ├── 4 shards/room    │
-│  ├── Message broadcast                  │  ├── User TTL (60s)   │
-│  ├── History (last 100)                 │  ├── Heartbeat        │
-│  └── Rate limiting                      │  └── Cleanup alarm    │
-└─────────────────────────────────────────────────────────────────┘
-```
+![Architecture Diagram](docs/architecture.svg)
 
 ### Durable Objects
 
