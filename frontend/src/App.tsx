@@ -151,8 +151,13 @@ function ChatView({
   )
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(e.target.value)
-    if (e.target.value.length > 0) throttledTyping()
+    const value = e.target.value
+    setInputText(value)
+    if (value.length > 0) {
+      throttledTyping()
+    } else {
+      sendTyping(false)
+    }
   }
 
   const handleSend = () => {

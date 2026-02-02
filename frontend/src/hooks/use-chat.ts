@@ -52,7 +52,9 @@ class WebSocketManager {
       try {
         const msg: ServerMessage = JSON.parse(event.data)
         this.handlers.get(key)?.forEach((handler) => handler(msg))
-      } catch {}
+      } catch {
+        // ignore malformed messages
+      }
     }
 
     this.sockets.set(key, ws)
