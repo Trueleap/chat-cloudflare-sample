@@ -1,0 +1,23 @@
+frontend/wrangler.toml
+  da111cea1791e293 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "cab96f886233100a88b484e5a9caa00de80a0972",
+  "prompts": {
+    "da111cea1791e293": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_3e34ad146ffenLdCu6RxltCIzZ",
+        "model": "anthropic/claude-opus-4-5"
+      },
+      "human_author": "Bikash Phukan <bphkns@gmail.com>",
+      "messages": [],
+      "total_additions": 248,
+      "total_deletions": 158,
+      "accepted_lines": 3,
+      "overriden_lines": 0
+    }
+  }
+}
