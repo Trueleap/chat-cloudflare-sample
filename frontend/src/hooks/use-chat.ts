@@ -1,5 +1,6 @@
-import { useEffect, useRef, useCallback, useState } from "react"
+import { useEffect, useCallback, useState } from "react"
 import { useQueryClient, useQuery, useMutation } from "@tanstack/react-query"
+import { useDebouncedCallback } from "@tanstack/react-pacer"
 import {
   MessageId,
   type RoomId,
@@ -246,26 +247,20 @@ export function useChat(roomId: RoomId, userId: UserId, options: UseChatOptions)
     },
   })
 
-  const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const stopTyping = useDebouncedCallback(
+    () => wsManager.send(roomId, userId, { _tag: "Typing", isTyping: false }),
+    { wait: 3000 }
+  )
 
   const sendTyping = useCallback(
     (isTyping: boolean) => {
       wsManager.send(roomId, userId, { _tag: "Typing", isTyping })
       if (isTyping) {
-        if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current)
-        typingTimeoutRef.current = setTimeout(() => {
-          wsManager.send(roomId, userId, { _tag: "Typing", isTyping: false })
-        }, 3000)
+        stopTyping()
       }
     },
-    [roomId, userId]
+    [roomId, userId, stopTyping]
   )
-
-  useEffect(() => {
-    return () => {
-      if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current)
-    }
-  }, [])
 
   return {
     isConnected,
