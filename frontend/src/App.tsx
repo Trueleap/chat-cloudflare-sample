@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import { useDebouncedCallback, useThrottledCallback } from "@tanstack/react-pacer"
+import { useThrottledCallback } from "@tanstack/react-pacer"
 import { RoomId, UserId, type RoomId as RoomIdType, type UserId as UserIdType } from "@shared/types"
 import { Send, Plus, Share2, LogOut, PanelLeftClose, PanelLeft } from "lucide-react"
 
@@ -145,14 +145,14 @@ function ChatView({
     scrollToBottom()
   }, [messages, scrollToBottom])
 
-  const debouncedTyping = useDebouncedCallback(
+  const throttledTyping = useThrottledCallback(
     () => sendTyping(true),
-    { wait: 300 }
+    { wait: 1000 }
   )
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value)
-    if (e.target.value.length > 0) debouncedTyping()
+    if (e.target.value.length > 0) throttledTyping()
   }
 
   const handleSend = () => {
