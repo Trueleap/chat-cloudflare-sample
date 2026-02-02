@@ -1,0 +1,25 @@
+name = "durable-effect-chat"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+account_id = "d68481e39ce3d5b6a7fb823f8c810c07"
+
+[durable_objects]
+bindings = [
+  { name = "CHAT_ROOM", class_name = "ChatRoom" },
+  { name = "PRESENCE", class_name = "PresenceDO" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ChatRoom"]
+
+[[migrations]]
+tag = "v2"
+new_classes = ["PresenceDO"]
+
+[env.dev]
+name = "durable-effect-chat-dev"
+
+[env.production]
+name = "durable-effect-chat"
